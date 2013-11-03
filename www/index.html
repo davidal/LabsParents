@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Labs - Proud Parenting</title>
+
+  <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+  <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+  <script src="css/source-sans-pro.js"></script>
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="header">Labs - Proud Parenting </div>
+  <div class="content">
+  <div  onclick="capturePhoto();" class="box"><img src="img/home_capture.png"/><div>Capture Photo</div></div>
+    <div  onclick="app.showAlert('go to profile');" class="box"><img src="img/home_profile.png"/><div>My Profile</div></div>
+    <div  onclick="app.showAlert('go to history');" class="box"><img src="img/home_history.png"/><div>History</div></div>
+    <div  onclick="app.showAlert('go to funnnn');" class="box"><img src="img/home_capture.png"/><div>Fun</div></div>
+    <div  onclick="app.showAlert('go to somewhere over the rainbow');" class="box"><img src="img/home_capture.png"/><div>Something...</div>
+  </div>
+     
+     <script id="employee-tpl" type="text/x-handlebars-template">
+    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
+    <div class='details'>
+        <img class='employee-image' src='img/{{firstName}}_{{lastName}}.jpg' />
+        <h1>{{firstName}} {{lastName}}</h1>
+        <h2>{{title}}</h2>
+        <span class="location"></span>
+        <ul>
+            <li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
+            <li><a href="tel:{{cellPhone}}">Call Cell<br/>{{cellPhone}}</a></li>
+            <li><a href="sms:{{cellPhone}}">SMS<br/>{{cellPhone}}</a></li>
+            <li><a href="#" class="add-location-btn">Add Location</a></li>
+            <li><a href="#" class="change-pic-btn">Change Picture</a></li>
+        </ul>
+    </div>
+</script>
+
+  </body>
+  <script src="js/main.js"></script>
+  <script src="js/camera.js"></script>
+
+  </html>
